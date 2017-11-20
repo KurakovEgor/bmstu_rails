@@ -1,3 +1,7 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'perfect_numbers/check_sequence_input'
+  #post 'perfect_numbers/send_n'
+  root 'perfect_numbers#check_sequence_input'
+  post 'perfect_numbers/check_sequence_input_array'
+  post 'perfect_numbers/get_result'
 end

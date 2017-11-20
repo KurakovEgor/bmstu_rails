@@ -1,0 +1,11 @@
+<h1>RESULTS:</h1>
+<%= form_with url: '/perfect_numbers/get_result', local: true do |form| %>
+  <% @numbers.each do |number|%>
+    <p>
+      <%= number %><br>
+    </p>
+  <% end%>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

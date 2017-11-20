@@ -1,0 +1,10 @@
+<h1>New request for check sequence</h1>
+<%= form_with url: '/perfect_numbers/check_sequence_input_array', local: true do |form| %>
+  <p>
+    <%= form.label :n %><br>
+    <%= form.number_field :n %><br>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
