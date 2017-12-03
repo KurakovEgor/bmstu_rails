@@ -1,10 +1,22 @@
 <h1>RESULTS:</h1>
-<%= form_with url: '/perfect_numbers/get_result', local: true do |form| %>
-  <% @numbers.each do |number|%>
+<%= form_with url: '/', method: 'get', local: true do |form| %>
     <p>
-      <%= number %><br>
+      Самая длинная последовательность совершенных чисел:
+      <%= @longest_seq %>
     </p>
-  <% end%>
+    <p>
+      Последовательности совершенных чисел:
+      <table>
+        <% @sequences.each do |sequence| %>
+          <tr>
+            <% sequence.each do |el| %>
+                <td><%= el %></td>
+            <%end%>
+          </tr>
+        <% end %>
+      </table>
+    </p>
+
   <p>
     <%= form.submit %>
   </p>
