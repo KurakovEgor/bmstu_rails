@@ -5,7 +5,7 @@ def get_dividers(number)
 end
 
 def perfect?(number)
-  get_dividers(number).inject(0) { |result, elem| result + elem } == number
+  get_dividers(number).inject(:+) == number
 end
 
 def perfect_seqs(seq_of_numbers)

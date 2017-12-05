@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  get 'perfect_numbers/check_sequence_input'
-  #post 'perfect_numbers/send_n'
-  root 'perfect_numbers#check_sequence_input'
-  post 'perfect_numbers/check_sequence_input_array'
-  post 'perfect_numbers/get_result'
+  get 'perfect_numbers/index'
+  get 'perfect_numbers/result'
+
+  root 'perfect_numbers#index'
 end
