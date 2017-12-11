@@ -41,7 +41,7 @@ function showResult(data) {
     if (data.sequences.length === 0) {
         html += `
         <tr>
-            <td>Не нашлось ни одной последовательности</td>
+            <td></td><td>Не нашлось ни одной последовательности</td>
         </tr>
         `;
     }
