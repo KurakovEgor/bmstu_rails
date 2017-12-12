@@ -11,6 +11,18 @@ class PerfectNumbersControllerTest < ActionDispatch::IntegrationTest
     page.assert_no_text '#form'
   end
 
+  test 'check rss format' do
+    get perfect_numbers_result_url(input_numbers: %w'1 2 3 4 5 6 7 8 9 10', format: :rss)
+    assert_response :success
+    assert_includes @response.headers['Content-Type'], 'application/rss'
+  end
+
+  test 'check xml format' do
+    get perfect_numbers_result_url(input_numbers: %w'1 2 3 4 5 6 7 8 9 10', format: :xml)
+    assert_response :success
+    assert_includes @response.headers['Content-Type'], 'application/xml'
+  end
+
   test 'should get no perfect numbers from 1' do
     visit BASE_URL
 
