@@ -1,0 +1,31 @@
+<h1>Новый запрос для нахождения последовательностей совершенных чисел:</h1>
+
+<%= form_tag('', id: 'input_n') do %>
+<p>
+  <%= label_tag :n, 'Введите количество чисел в последовательности:' %>
+  <%= number_field_tag :n, 1, min: 1, max: 100 %>
+</p>
+<p>
+  <%= submit_tag 'Ввести!' %>
+</p>
+<% end %>
+
+<span class="error"></span>
+
+<%= form_with(
+        scope: 'input_numbers',
+        url: '/perfect_numbers/result.json',
+        method: 'get',
+        id: 'form',
+        remote: true,
+        class: 'hidden',
+        :'data-count' => 0
+    ) do |form| %>
+  <div class="data"></div>
+  <p>
+    <%= form.submit 'Ввести' %>
+    <%= form.button 'Сбросить', type: 'reset' %>
+  </p>
+<% end %>
+
+<div class="result"></div>

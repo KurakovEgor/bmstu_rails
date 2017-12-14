@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'perfect_numbers/index'
+  get 'perfect_numbers/result'
+
+  root 'perfect_numbers#index'
 end
