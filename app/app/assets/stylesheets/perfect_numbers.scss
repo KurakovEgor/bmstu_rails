@@ -1,0 +1,23 @@
+// Place all the styles related to the PerfectNumbers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$table_border: solid black 1px;
+$error_color: red;
+$error_border: solid $error_color 1px;
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: $error_color;
+}
+
+.redBorder {
+  border: $error_border;
+}
+
+table, tr, td {
+  border: $table_border;
+  border-collapse: collapse;
+}
