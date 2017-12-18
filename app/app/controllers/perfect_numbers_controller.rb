@@ -1,4 +1,4 @@
-require 'finding_perfect'
+# require 'finding_perfect'
 
 class PerfectNumbersController < ApplicationController
 

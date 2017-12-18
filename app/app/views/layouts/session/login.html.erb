@@ -1,0 +1,15 @@
+<%= form_tag url_for(controller: :session, action: :create), method: 'post' do %>
+<div class="form-group">
+    <%= label_tag 'email' %>
+    <%= text_field_tag(:email, nil, placeholder: 'Введите e-mail', class: 'form-control', type: 'email') %>
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+</div>
+
+<div class="form-group">
+    <%= label_tag 'password'  %>
+    <%= password_field_tag 'password', class:'form-control', type: 'password', placeholder: 'Password' %><br />
+</div>
+
+<%= submit_tag 'Login', class: 'btn btn-outline-primary' %><br />
+
+<% end %>
